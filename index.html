@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOF Scripts Explainer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* For smoother animations if not fully covered by Tailwind utilities */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes scaleUp {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fadeIn { animation: fadeIn 0.3s ease-out; }
+    .animate-scaleUp { animation: scaleUp 0.3s ease-out; }
+
+    /* Basic styling for Markdown generated HTML if Tailwind prose doesn't cover everything */
+    .markdown-content h1 { @apply text-2xl font-bold mb-4 text-sky-300; }
+    .markdown-content h2 { @apply text-xl font-semibold mb-3 text-sky-400; }
+    .markdown-content h3 { @apply text-lg font-semibold mb-2 text-sky-400; }
+    .markdown-content p { @apply mb-4 leading-relaxed; }
+    .markdown-content ul { @apply list-disc list-inside mb-4 pl-4; }
+    .markdown-content ol { @apply list-decimal list-inside mb-4 pl-4; }
+    .markdown-content li { @apply mb-1; }
+    .markdown-content code { @apply bg-slate-700 text-pink-400 px-1 py-0.5 rounded text-sm font-mono; }
+    .markdown-content pre { @apply bg-slate-900 p-3 rounded-md overflow-x-auto mb-4; }
+    .markdown-content pre code { @apply bg-transparent p-0; }
+    .markdown-content blockquote { @apply border-l-4 border-slate-500 pl-4 italic text-slate-400 mb-4; }
+    .markdown-content a { @apply text-teal-400 hover:text-teal-300 underline; }
+    .markdown-content strong { @apply font-bold; }
+    .markdown-content em { @apply italic; }
+
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "marked": "https://esm.sh/marked@^13.0.2"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-900">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>

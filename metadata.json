@@ -1,0 +1,5 @@
+{
+  "name": "DOF Scripts Explainer",
+  "description": "An interactive tool to understand Python scripts for the DOF Scraper and RAG project, detailing their purpose, key concepts, and source code.",
+  "requestFramePermissions": []
+}
